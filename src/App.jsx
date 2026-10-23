@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
+import WeatherDashboard from './WeatherDashboard'
 
 const STORAGE_KEYS = {
   draft: 'east-nile-exam-draft',
@@ -62,6 +63,7 @@ function generateAttemptNumber() {
 }
 
 function App() {
+  const [activeView, setActiveView] = useState('exam')
   const [screen, setScreen] = useState('login')
   const [studentName, setStudentName] = useState('')
   const [studentId, setStudentId] = useState('')
@@ -270,11 +272,31 @@ function App() {
         />
         <div>
           <h1>{EXAM_TITLE}</h1>
-          <p className="subtitle">واجهة تجريبية أولية بدون Backend أو قاعدة بيانات خارج المتصفح.</p>
+          <p className="subtitle">واجهة تجريبية أولية تشمل منصة الامتحان ولوحة طقس بدون Backend.</p>
         </div>
       </header>
 
-      {screen === 'login' && (
+      <section className="card view-switcher">
+        <h2>الوحدات المتاحة</h2>
+        <div className="actions-row">
+          <button
+            type="button"
+            className={activeView === 'exam' ? 'primary-btn' : 'secondary-btn'}
+            onClick={() => setActiveView('exam')}
+          >
+            منصة الامتحان
+          </button>
+          <button
+            type="button"
+            className={activeView === 'weather' ? 'primary-btn' : 'secondary-btn'}
+            onClick={() => setActiveView('weather')}
+          >
+            لوحة الطقس
+          </button>
+        </div>
+      </section>
+
+      {activeView === 'exam' && screen === 'login' && (
         <section className="card">
           <h2>دخول الطالب</h2>
           <form onSubmit={handleLogin} className="form-grid">
@@ -303,7 +325,7 @@ function App() {
         </section>
       )}
 
-      {screen === 'instructions' && (
+      {activeView === 'exam' && screen === 'instructions' && (
         <section className="card">
           <h2>تعليمات الامتحان</h2>
           <ul className="instructions">
@@ -321,7 +343,7 @@ function App() {
         </section>
       )}
 
-      {screen === 'exam' && (
+      {activeView === 'exam' && screen === 'exam' && (
         <section
           className="card exam-mode"
           onCopy={(event) => event.preventDefault()}
@@ -384,7 +406,7 @@ function App() {
         </section>
       )}
 
-      {screen === 'submitted' && (
+      {activeView === 'exam' && screen === 'submitted' && (
         <section className="card">
           <h2>تم استلام المحاولة</h2>
           <p className="success">{submitMessage}</p>
@@ -406,7 +428,7 @@ function App() {
         </section>
       )}
 
-      {screen === 'review' && (
+      {activeView === 'exam' && screen === 'review' && (
         <section className="card">
           <h2>مراجعة إدارية تجريبية</h2>
           <p>
@@ -442,6 +464,8 @@ function App() {
           )}
         </section>
       )}
+
+      {activeView === 'weather' && <WeatherDashboard />}
     </main>
   )
 }
