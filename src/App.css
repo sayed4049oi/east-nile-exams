@@ -1,0 +1,232 @@
+.layout {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.brand-card,
+.card {
+  background: #ffffff;
+  border: 1px solid #d9e4f2;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(14, 78, 146, 0.08);
+  margin-bottom: 16px;
+}
+
+.brand-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+}
+
+.college-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  border: 1px dashed #7ea6d8;
+  background: #f4f9ff;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #355d88;
+}
+
+.card {
+  padding: 20px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  color: #1d3f66;
+}
+
+input {
+  border: 1px solid #bdd0e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #0f64c6;
+  outline-offset: 2px;
+}
+
+.primary-btn,
+.secondary-btn,
+.danger-btn,
+.option-btn {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-family: inherit;
+}
+
+.primary-btn {
+  background: #0e63c6;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #e8f2ff;
+  color: #0e4e92;
+  border-color: #bfd8f7;
+}
+
+.danger-btn {
+  background: #c53030;
+  color: #fff;
+}
+
+.instructions {
+  margin: 0 0 16px;
+  padding-inline-start: 20px;
+  line-height: 1.8;
+}
+
+.meta {
+  background: #f2f8ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  color: #174472;
+}
+
+.exam-mode {
+  user-select: none;
+}
+
+.exam-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.progress-wrap {
+  height: 10px;
+  background: #d7e7fb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 8px 0 14px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0f64c6, #2e8cff);
+}
+
+.question-index {
+  color: #1a4c7f;
+  margin-bottom: 6px;
+}
+
+h3 {
+  margin: 0 0 14px;
+  color: #0b355d;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option-btn {
+  text-align: right;
+  border: 1px solid #c3d7ef;
+  background: #f7fbff;
+  color: #0e3457;
+}
+
+.option-btn.selected {
+  border-color: #0e63c6;
+  background: #e6f1ff;
+  font-weight: 700;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.warning-note {
+  margin-top: 12px;
+  color: #8a4c08;
+  background: #fff6eb;
+  border: 1px solid #f2d2aa;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.review-box {
+  border: 1px solid #c9dbef;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fbfdff;
+  margin: 12px 0;
+}
+
+.events-list {
+  margin: 0;
+  padding-inline-start: 18px;
+}
+
+.events-list li {
+  margin-bottom: 8px;
+}
+
+.success {
+  color: #0f7a37;
+  font-weight: 700;
+}
+
+.loading,
+.error {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.loading {
+  color: #0f64c6;
+}
+
+.error {
+  color: #c53030;
+}
+
+@media (max-width: 700px) {
+  .brand-card {
+    align-items: flex-start;
+  }
+
+  .college-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .card,
+  .brand-card {
+    padding: 14px;
+  }
+
+  .actions-row > button {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
