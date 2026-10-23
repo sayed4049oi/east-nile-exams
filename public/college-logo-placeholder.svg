@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="مكان شعار الكلية">
+  <rect width="220" height="220" rx="20" fill="#f4f9ff" stroke="#2c74c9" stroke-width="4" stroke-dasharray="10 8"/>
+  <g fill="#2c74c9" font-family="Tahoma, Arial, sans-serif" text-anchor="middle">
+    <text x="110" y="96" font-size="22" font-weight="700">مكان الشعار</text>
+    <text x="110" y="126" font-size="16">استبدل هذا الملف</text>
+    <text x="110" y="148" font-size="16">بشعار الكلية الرسمي</text>
+  </g>
+</svg>
