@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">شعار كلية شرق النيل</title>
+  <desc id="desc">شعار أزرق على شكل قوس مع موجات مائية واسم كلية شرق النيل</desc>
+  <rect width="220" height="220" fill="#ffffff"/>
+  <g fill="none" stroke="#101dcc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M77 169V58c0-19 14-34 33-34h0c19 0 33 15 33 34v111"/>
+    <path d="M77 169h66"/>
+  </g>
+  <g fill="#101dcc" font-family="Tahoma, Arial, sans-serif" text-anchor="middle" font-weight="700">
+    <text x="110" y="61" font-size="18">كلية</text>
+    <text x="110" y="83" font-size="18">شرق</text>
+    <text x="110" y="105" font-size="18">النيل</text>
+  </g>
+  <g fill="none" stroke="#101dcc" stroke-width="7" stroke-linecap="round">
+    <path d="M66 119c10-9 18 9 28 0s18-9 28 0 18 9 28 0"/>
+    <path d="M66 132c10-9 18 9 28 0s18-9 28 0 18 9 28 0"/>
+  </g>
+</svg>
