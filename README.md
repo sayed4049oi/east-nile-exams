@@ -6,20 +6,20 @@ What is implemented now?
  •  Demo student login screen (name + university ID) with basic validation.
  •  Instructions screen before starting the exam.
  •  Local demo exam experience:
-	 ○  Timer
-	 ○  Progress bar
-	 ○  One question at a time
-	 ○  Answer selection and navigation between questions
-	 ○  Answers saved locally in localStorage
+	○  Timer
+	○  Progress bar
+	○  One question at a time
+	○  Answer selection and navigation between questions
+	○  Answers saved locally in localStorage
  •  On submit:
-	 ○  No score is calculated or displayed
-	 ○  A message shows that the attempt was saved with status Under Review
-	 ○  Student data and attempt ID are displayed
+	○  No score is calculated or displayed
+	○  A message shows that the attempt was saved with status Under Review
+	○  Student data and attempt ID are displayed
  •  Demo review screen after submission showing that results are saved for admin review only.
  •  Front-end protection indicators (demo):
-	 ○  Disabled copy / paste / cut and text selection inside the exam screen
-	 ○  Disabled context menu
-	 ○  Local logging of tab switch / focus loss events
+	○  Disabled copy / paste / cut and text selection inside the exam screen
+	○  Disabled context menu
+	○  Local logging of tab switch / focus loss events
 
 Important note: This protection is front-end only and does not fully prevent cheating without a server-side security layer.
 
