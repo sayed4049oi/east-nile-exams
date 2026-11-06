@@ -37,15 +37,15 @@ It can be replaced directly with the official college logo image while keeping t
 
 Run Locally
 
-npm install
-npm run dev
+    npm install
+    npm run dev
 
 Then open the local link shown in the terminal.
 
 Verification and Quality
 
-npm run lint
-npm run build
+    npm run lint
+    npm run build
 
 > There is no automated test setup in the project yet (such as Vitest / Jest), so verification at this stage was done via lint / build only.
 
