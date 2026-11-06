@@ -1,62 +1,56 @@
-# نظام امتحانات كلية شرق النيل (نسخة تجريبية أولى)
+Built by ALSayed Omer - Aspiring Computer Science student
+This is an initial runnable front-end prototype built with React + Vite. It runs locally in the browser only, with no real backend at this stage.
+What is implemented now?
+ •  Arabic RTL interface titled East Nile College Exam System.
+ •  Responsive design (mobile / desktop) with blue and white colors.
+ •  Demo student login screen (name + university ID) with basic validation.
+ •  Instructions screen before starting the exam.
+ •  Local demo exam experience:
+	 ○  Timer
+	 ○  Progress bar
+	 ○  One question at a time
+	 ○  Answer selection and navigation between questions
+	 ○  Answers saved locally in localStorage
+ •  On submit:
+	 ○  No score is calculated or displayed
+	 ○  A message shows that the attempt was saved with status Under Review
+	 ○  Student data and attempt ID are displayed
+ •  Demo review screen after submission showing that results are saved for admin review only.
+ •  Front-end protection indicators (demo):
+	 ○  Disabled copy / paste / cut and text selection inside the exam screen
+	 ○  Disabled context menu
+	 ○  Local logging of tab switch / focus loss events
 
-هذه نسخة واجهة أولية قابلة للتشغيل مبنية بـ **React + Vite** وتعمل محليًا داخل المتصفح فقط، بدون Backend حقيقي في هذه المرحلة.
+Important note: This protection is front-end only and does not fully prevent cheating without a server-side security layer.
 
-## ما الذي تم تنفيذه الآن؟
+Logo
 
-- واجهة عربية RTL بعنوان **نظام امتحانات كلية شرق النيل**.
-- تصميم متجاوب (جوال/سطح مكتب) بألوان أزرق وأبيض.
-- شاشة دخول تجريبية للطالب (الاسم + الرقم الجامعي) مع تحقق أساسي.
-- شاشة تعليمات قبل بدء الامتحان.
-- تجربة امتحان تجريبية محلية:
-  - مؤقت
-  - شريط تقدم
-  - سؤال واحد في كل مرة
-  - اختيار إجابة والتنقل بين الأسئلة
-  - حفظ الإجابات محليًا في `localStorage`
-- عند التسليم:
-  - لا يتم حساب أو عرض الدرجة
-  - تظهر رسالة حفظ المحاولة وحالتها **قيد المراجعة**
-  - عرض بيانات الطالب ورقم المحاولة
-- شاشة مراجعة تجريبية بعد التسليم توضّح أن النتائج محفوظة للمراجعة الإدارية فقط.
-- مؤشرات حماية واجهة (تجريبية):
-  - تعطيل النسخ/اللصق/القص وتحديد النص داخل شاشة الامتحان
-  - منع قائمة السياق
-  - تسجيل أحداث تبديل التبويب/الخروج من التركيز محليًا
+A clear placeholder logo file is placed at:
 
-> **تنبيه مهم:** هذه الحماية واجهية فقط ولا تمنع الغش بالكامل دون طبقة أمان من جهة الخادم.
+public/college-logo-placeholder.svg
 
-## الشعار
+It can be replaced directly with the official college logo image while keeping the same path, or by updating the path in src/App.jsx.
 
-تم وضع ملف بديل واضح للشعار في:
+Run Locally
 
-`public/college-logo-placeholder.svg`
+            npm install
+            npm run dev
 
-يمكن استبداله مباشرة بصورة شعار الكلية الرسمية مع الحفاظ على نفس المسار أو تعديل المسار في `src/App.jsx`.
+Then open the local link shown in the terminal.
+Verification and Quality
 
-## التشغيل محليًا
+          npm run lint
+          npm run build
+There is no automated test setup in the project yet (such as Vitest / Jest), so verification at this stage was done via lint / build only.
 
-```bash
-npm install
-npm run dev
-```
+What is needed next (Next Phase)
 
-ثم افتح الرابط المحلي الذي يظهر في الطرفية.
+ •  Real backend for managing students, exams, and attempts.
+ •  Real database instead of local browser storage.
+ •  Real authentication and roles (student / teacher / admin).
+ •  Full admin dashboard for review, correction, and approval.
+ •  Server-side security (sessions, encryption, audit logs, API protection).
+ •  Stronger anti-cheating mechanisms at server and infrastructure level.
 
-## التحقق والجودة
 
-```bash
-npm run lint
-npm run build
-```
 
-> لا توجد بنية اختبارات آلية جاهزة حاليًا في المشروع (مثل Vitest/Jest)، لذلك تم الاكتفاء بالتحقق عبر lint/build في هذه المرحلة.
-
-## ما يلزم لاحقًا (المرحلة التالية)
-
-- Backend حقيقي لإدارة الطلاب والامتحانات والمحاولات.
-- قاعدة بيانات فعلية بدل الحفظ المحلي في المتصفح.
-- مصادقة حقيقية وصلاحيات (طالب/مدرس/إدارة).
-- لوحة إدارة كاملة للمراجعة والتصحيح والاعتماد.
-- أمان server-side (جلسات، تشفير، سجلات تدقيق، حماية API).
-- منع الغش بآليات أقوى على مستوى الخادم والبنية المؤسسية.
